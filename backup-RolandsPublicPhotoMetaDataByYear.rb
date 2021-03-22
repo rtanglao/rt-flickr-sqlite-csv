@@ -1,0 +1,10 @@
+#!/usr/bin/env ruby
+require 'rubygems'
+require 'json'
+require 'pp'
+require 'time'
+require 'date'
+require 'parseconfig'
+require 'typhoeus'
+require 'awesome_print'
+require 'csv'
