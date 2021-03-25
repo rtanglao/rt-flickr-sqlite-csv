@@ -4,7 +4,7 @@ flickr api data in CSV and SQLite
 ## 24march2021 moved the two table version SQLite file (one table for 2019, one for 2020) to dropbox because at 67M it's too large for github
 
 * here is the home of the file: https://www.dropbox.com/s/6j10e2vohp2j5kf/roland2019-2020.db?dl=0
-* I think 1 table version that includes 2019 and 2020 is probably better? so making that next
+* I think a 1 table version that includes 2019 and 2020 in 1 table instead of two is probably better? so making that next
 
 ## 23march2021 creating a two table SQLite database using simon willion's csvs-to-sqlite
 
