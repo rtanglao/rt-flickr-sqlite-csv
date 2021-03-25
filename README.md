@@ -9,7 +9,7 @@ flickr api data in CSV and SQLite
 ## 23march2021 creating a two table SQLite database using simon willion's csvs-to-sqlite
 
 * one table for `2019-roland-flickr-metadata.csv` and one table for `2020-roland-flickr-metadata.csv`
-* 
+ 
 ```bash
 csvs-to-sqlite *.csv -dt datetaken -dt dateupload -dt lastupdate roland2019-2020.db
 ```
