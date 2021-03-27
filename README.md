@@ -1,6 +1,14 @@
 # rt-flickr-sqlite-csv
 flickr api data in CSV and SQLite
 
+## 26march2020 make 1 CSV file with both 2019 and 2020
+
+`tail -n +2` outputs the entire file starting with line 2; skip the first line which is the CSVheader line
+
+```bash
+cp 2019-roland-flickr-metadata.csv 2020-and-2019-roland-flickr-metadata.csv
+tail -n +2 2020-roland-flickr-metadata.csv >> 2020-and-2019-roland-flickr-metadata.csv
+```
 ## 24march2021 moved the two table version SQLite file (one table for 2019, one for 2020) to dropbox because at 67M it's too large for github
 
 * here is the home of the file: https://www.dropbox.com/s/6j10e2vohp2j5kf/roland2019-2020.db?dl=0
