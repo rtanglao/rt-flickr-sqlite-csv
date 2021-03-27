@@ -1,7 +1,14 @@
 # rt-flickr-sqlite-csv
 flickr api data in CSV and SQLite
 
-## 26march2020 make 1 CSV file with both 2019 and 2020
+## 26march2021 make sqlite file from 2020-and-2019-roland-flickr-metadata.csv
+
+```bash
+csvs-to-sqlite 2020-and-2019-roland-flickr-metadata.csv -dt datetaken -dt dateupload\
+-dt lastupdate one-table-roland2019-2020.db
+```
+
+## 26march2021 make 1 CSV file with both 2019 and 2020
 
 `tail -n +2` outputs the entire file starting with line 2; skip the first line which is the CSVheader line
 
