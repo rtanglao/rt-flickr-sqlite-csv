@@ -1,12 +1,26 @@
 # rt-flickr-sqlite-csv
 flickr api data in CSV and SQLite
 
+## 28march2021 how i backed up the photos
+```bash
+ 1129  bundle exec ../backup75x75.rb "https://www.dropbox.com/s/llkaiznbfpm85lt/2020-and-2019-roland-flickr-metadata.csv?dl=1" 2>stderr.txt
+ 1131  bundle exec ../backup75x75.rb "https://www.dropbox.com/s/llkaiznbfpm85lt/2020-and-2019-roland-flickr-metadata.csv?dl=1" 2>28march2021-2nd-run-stderr.txt
+ 1137  bundle exec ../backup75x75.rb "/Users/roland/Documents/GIT/files_too_big_for_github_rt-flickr-sqlite-csv/2020-and-2019-roland-flickr-metadata.csv" 2>28march2021-3rd-run-file-url-stderr.txt
+ 1138  bundle exec ../backup-from-metadata-file-75x75.rb "/Users/roland/Documents/GIT/files_too_big_for_github_rt-flickr-sqlite-csv/2020-and-2019-roland-flickr-metadata.csv" 2>28march2021-4th-run-file-not-url-stderr.txt
+ 1140  bundle exec ../backup-from-metadata-file-75x75.rb "/Users/roland/Documents/GIT/files_too_big_for_github_rt-flickr-sqlite-csv/2020-and-2019-roland-flickr-metadata.csv" 2>28march2021-4th-run-file-not-url-stderr.txt
+ 1141  bundle exec ../backup-from-metadata-file-75x75.rb "/Users/roland/Documents/GIT/files_too_big_for_github_rt-flickr-sqlite-csv/2020-and-2019-roland-flickr-metadata.csv" 2>28march2021-4th-run-file-not-url-stderr.txt
+ 1142  bundle exec ../backup-from-metadata-file-75x75.rb "/Users/roland/Documents/GIT/files_too_big_for_github_rt-flickr-sqlite-csv/2020-and-2019-roland-flickr-metadata.csv" 2>28march2021-4th-run-file-not-url-stderr.txt
+ 1145  bundle exec ../backup-from-metadata-file-75x75.rb "/Users/roland/Documents/GIT/files_too_big_for_github_rt-flickr-sqlite-csv/2020-and-2019-roland-flickr-metadata.csv" 2>28march2021-5th-run-quotequote-file-not-url-stderr.txt
+ 1146  bundle exec ../backup-from-metadata-file-75x75.rb "/Users/roland/Documents/GIT/files_too_big_for_github_rt-flickr-sqlite-csv/2020-and-2019-roland-flickr-metadata.csv" 2>28march2021-6th-run-quotequote-file-not-url-stderr.txt
+ ```
+
 ## 28march2021 wordwrap/end of line issues, i took less photos than  i thought :-)
 
-2.9 times as mnay photos in 2020 compared to 2019 (36911/12638 = 2.9)
+* 2.9 times as many photos in 2020 compared to 2019 (36911/12638 = 2.9)
 
 ```bash
-roland@Rolands-MacBook-Air THUMBS_75X75 % mlr --csv cut -f id,datetaken,url_sq ../../files_too_big_for_github_rt-flickr-sqlite-csv/2020-and-2019-roland-flickr-metadata.csv > /tmp/url_sq.txt
+roland@Rolands-MacBook-Air THUMBS_75X75 % mlr --csv cut -f id,datetaken,url_sq \
+../../files_too_big_for_github_rt-flickr-sqlite-csv/2020-and-2019-roland-flickr-metadata.csv > /tmp/url_sq.txt
 roland@Rolands-MacBook-Air THUMBS_75X75 % grep 2020- /tmp/url_sq.txt| wc -l
 36911
 roland@Rolands-MacBook-Air THUMBS_75X75 % grep 2019- /tmp/url_sq.txt| wc -l
