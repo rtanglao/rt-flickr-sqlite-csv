@@ -4,11 +4,14 @@ flickr api data in CSV and SQLite
 ## 28march2021 R code to map a colour to one of the R colour_names
 
 * from http://rolandtanglao.com/2015/04/28/p2-closest-color-in-r-using-plotrix/ 
-* see also some useful rgb manipulation functions at: https://stackoverflow.com/questions/41209395/from-hex-color-code-or-rgb-to-color-name-using-r?noredirect=1&lq=1
+
 ```r
 > color.id("#ffff00")[1]
 [1] "yellow"
 ```
+
+* see also some useful rgb manipulation functions at: https://stackoverflow.com/questions/41209395/from-hex-color-code-or-rgb-to-color-name-using-r?noredirect=1&lq=1
+
 
 
 ## 28march2021 how i backed up the photos
