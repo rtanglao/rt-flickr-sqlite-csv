@@ -1,6 +1,15 @@
 # rt-flickr-sqlite-csv
 flickr api data in CSV and SQLite
 
+## 28march2021 R code to map a colour to one of the R colour_names
+
+* from http://rolandtanglao.com/2015/04/28/p2-closest-color-in-r-using-plotrix/
+```r
+> color.id("#ffff00")[1]
+[1] "yellow"
+```
+
+
 ## 28march2021 how i backed up the photos
 ```bash
  1129  bundle exec ../backup75x75.rb "https://www.dropbox.com/s/llkaiznbfpm85lt/2020-and-2019-roland-flickr-metadata.csv?dl=1" 2>stderr.txt
