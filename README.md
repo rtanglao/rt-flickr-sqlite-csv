@@ -1,6 +1,11 @@
 # rt-flickr-sqlite-csv
 flickr api data in CSV and SQLite
 
+## 28march2021 how to scramble an image
+
+* use this on the average colour image?!?
+    * https://dahtah.github.io/imager/unshuffle.html
+
 ## 28march2021 R code to map a colour to one of the R colour_names
 
 * from http://rolandtanglao.com/2015/04/28/p2-closest-color-in-r-using-plotrix/ 
