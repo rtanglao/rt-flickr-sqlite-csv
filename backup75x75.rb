@@ -57,6 +57,9 @@ CSV.foreach(URI.open(ARGV[0]), headers: true) do |p|
       id = p["id"]
       title = p["title"].gsub("/", " ")
       url = p["url_sq"]
+      if url.nil?
+        $stderr.printf("MISSING 75x75 THumb: photo id:%d, title:%s IS NIL\n", id, title)
+      end
       title = title[0..63] if title.length > 64
       datetaken = Time.parse(p["datetaken"])
       filename = sprintf("%4.4d-%2.2d-%2.2d-%2.2d-%2.2d-%2.2d-%d-%s.jpg", 
@@ -66,5 +69,5 @@ CSV.foreach(URI.open(ARGV[0]), headers: true) do |p|
       urls_filenames.push({"url"=> url, "filename" => filename}) if !url.nil?
 end
 
-$stderr.printf("FETCHING:%d originals\n", urls_filenames.length)
+$stderr.printf("FETCHING:%d square 75x75\n", urls_filenames.length)
 fetch_1_at_a_time(urls_filenames)
