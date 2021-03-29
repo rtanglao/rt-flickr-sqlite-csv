@@ -1,6 +1,14 @@
 # rt-flickr-sqlite-csv
 flickr api data in CSV and SQLite
 
+## 28march2021 how to get average colour using imagemagick version 7
+
+* `ggrep` because of OS X BSD  ridiculousness :-)
+
+```bash
+magick convert  2020-12-31-01-12-41-50781630447-IMG_4248.jpg \
+-resize 1x1 txt:- | ggrep -Po "#[[:xdigit:]]{6}
+```
 ## 28march2021 how to scramble an image
 
 * use this on the average colour image?!?
