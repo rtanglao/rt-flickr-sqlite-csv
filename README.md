@@ -5,9 +5,10 @@ flickr api data in CSV and SQLite
 
 * `ggrep` because of OS X BSD  ridiculousness :-)
 
-```bash
+```zsh
 magick convert  2020-12-31-01-12-41-50781630447-IMG_4248.jpg \
 -resize 1x1 txt:- | ggrep -Po "#[[:xdigit:]]{6}
+#58473A
 ```
 ## 28march2021 how to scramble an image
 
