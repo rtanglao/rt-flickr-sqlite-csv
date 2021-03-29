@@ -57,10 +57,12 @@ urls_filenames = []
 
 CSV.foreach(ARGV[0], headers: true) do |p|
       id = p["id"]
-      title = p["title"].gsub("/", " ")
+      title = p["title"].gsub("/", "")
+      title = title.gsub(" ", "_")
+      title = title.gsub(/["|'|!]/,"")
       url = p["url_sq"]
       if url == ""
-        $stderr.printf("MISSING 75x75 THumb: photo id:%d, title:%s IS QUOTEQUOTE\n", id, title)
+        $stderr.printf("MISSING 75x75 Thumb: photo id:%d, title:%s IS QUOTEQUOTE\n", id, title)
       end
       title = title[0..63] if title.length > 64
       datetaken = Time.parse(p["datetaken"])
