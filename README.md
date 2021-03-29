@@ -1,6 +1,33 @@
 # rt-flickr-sqlite-csv
 flickr api data in CSV and SQLite
 
+## 28march2021 how to get average colour using imagemagick version 7
+
+* `ggrep` because of OS X BSD  ridiculousness :-)
+
+```zsh
+magick convert  2020-12-31-01-12-41-50781630447-IMG_4248.jpg \
+-resize 1x1 txt:- | ggrep -Po "#[[:xdigit:]]{6}
+#58473A
+```
+## 28march2021 how to scramble an image
+
+* use this on the average colour image?!?
+    * https://dahtah.github.io/imager/unshuffle.html
+
+## 28march2021 R code to map a colour to one of the R colour_names
+
+* from http://rolandtanglao.com/2015/04/28/p2-closest-color-in-r-using-plotrix/ 
+
+```r
+> color.id("#ffff00")[1]
+[1] "yellow"
+```
+
+* see also some useful rgb manipulation functions at: https://stackoverflow.com/questions/41209395/from-hex-color-code-or-rgb-to-color-name-using-r?noredirect=1&lq=1
+
+
+
 ## 28march2021 how i backed up the photos
 ```bash
  1129  bundle exec ../backup75x75.rb "https://www.dropbox.com/s/llkaiznbfpm85lt/2020-and-2019-roland-flickr-metadata.csv?dl=1" 2>stderr.txt
