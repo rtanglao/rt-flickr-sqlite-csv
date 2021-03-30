@@ -1,6 +1,11 @@
 # rt-flickr-sqlite-csv
 flickr api data in CSV and SQLite
 
+## 29march2021 use daff merge to merge in a CSV of average colours?
+
+* [daff](https://github.com/paulfitz/daff) might be better than `mlr` in this case!
+* also check out xsv
+
 ## 28march2021 how to get average colour using imagemagick version 7
 
 * `ggrep` because of OS X BSD  ridiculousness :-)
