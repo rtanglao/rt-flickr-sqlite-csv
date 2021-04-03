@@ -17,7 +17,7 @@ D, [2021-04-03T00:06:30.710046 #55060] DEBUG -- : convert: insufficient image da
 
 * key ruby statements:
     * when shelling out filename has to have quotation marks around because of `?` and `!`, i.e. `convert \"%s\"`
-    * `$` has to be escaped with a `\` so use `gsub` i.e. `filename.gsub(/\$/, '\$'))`
+    * also when shelling out `$` has to be escaped with a `\` so use `gsub` i.e. `filename.gsub(/\$/, '\$'))`
 ```ruby
  #filename has to have quotation marks around it
  magickimp = sprintf("magick convert \"%s\" -resize 1x1 txt:- | ggrep -Po \"#[[:xdigit:]]{6}\"",
