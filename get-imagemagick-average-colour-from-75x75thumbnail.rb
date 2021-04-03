@@ -43,8 +43,9 @@ CSV.foreach(FILENAME, :headers => true) do |p|
   if status.success?
     puts stdout
   else
+    puts("")
     logger.debug stderr
-    abort 'error: could not execute command'
+    logger.debug 'error: could not execute magick convert command'
   end
 end
 
