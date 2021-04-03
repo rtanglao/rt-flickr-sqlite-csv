@@ -8,7 +8,14 @@ flickr api data in CSV and SQLite
 ```bash
 csvstack *.csv  > out.csv
 ``` 
-
+* and another example from unix stackexchange: https://superuser.com/questions/26834/how-to-join-two-csv-files/851612
+```bash
+csvjoin -c email id_email.csv email_name.csv
+```
+or
+```bash
+csvjoin -c 2,1 id_email.csv email_name.csv
+```
 ## 03april2021 how to fix missing photo?
 * maybe just add the column to the csv file and then for a missing or broken photo, just add set the average colour to 
 `""`,instead of for example `"#123456"`
