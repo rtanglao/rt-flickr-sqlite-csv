@@ -4,7 +4,8 @@ flickr api data in CSV and SQLite
 ## 02april2021 using open3 to call imagemagick
 
 ### 2nd try which is cleaner
-``ruby
+
+```ruby
 irb(main):036:0> stdout, stderr, status = Open3.capture3(magickimp)
 => ["#58473A\n", "", #<Process::Status: pid 44198 exit 0>]
 irb(main):037:1* if status.success?
