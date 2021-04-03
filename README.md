@@ -1,7 +1,15 @@
 # rt-flickr-sqlite-csv
 flickr api data in CSV and SQLite
 
-02april2021 after some regular expression fun and filenames with question marks have to be in double quotation marks
+## 03april2021 missing photo with id: 49822659318  on the flickr server
+
+```
+photo:49822659318, title:DSC_7954 url:https://live.staticflickr.com/65535/49822659318_9df1956f71_s.jpg filename:2020-04-26-17-05-39-49822659318-DSC_7954.jpg
+D, [2021-04-03T00:06:30.682553 #55060] DEBUG -- : magick convert "2020-04-26-17-05-39-49822659318-DSC_7954.jpg" -resize 1x1 txt:- | ggrep -Po "#[[:xdigit:]]{6}"
+D, [2021-04-03T00:06:30.710046 #55060] DEBUG -- : convert: insufficient image data in file `2020-04-26-17-05-39-49822659318-DSC_7954.jpg' @ error/jpeg.c/ReadJPEGImage_/1104.
+```
+
+## 02april2021 after some regular expression fun and filenames with question marks have to be in double quotation marks
 
 * key ruby statements
 ```ruby
