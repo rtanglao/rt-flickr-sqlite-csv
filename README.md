@@ -3,6 +3,21 @@ flickr api data in CSV and SQLite
 
 ## 02april2021 using open3 to call imagemagick
 
+### 2nd try which is cleaner
+``ruby
+irb(main):036:0> stdout, stderr, status = Open3.capture3(magickimp)
+=> ["#58473A\n", "", #<Process::Status: pid 44198 exit 0>]
+irb(main):037:1* if status.success?
+irb(main):038:1*   puts stdout
+irb(main):039:1* else
+irb(main):040:1*   abort 'error: could not execute command'
+irb(main):041:0> end
+irb(main):042:0* 
+#58473A
+=> nil
+
+```
+### first try
 ```ruby
  magickimp = "magick convert  2020-12-31-01-12-41-50781630447-IMG_4248.jpg \
 irb(main):025:0" -resize 1x1 txt:- | ggrep -Po \"#[[:xdigit:]]{6}\""
