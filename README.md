@@ -1,6 +1,10 @@
 # rt-flickr-sqlite-csv
 flickr api data in CSV and SQLite
 
+## 03paril2021 how to fix missing photo?
+* maybe just add the column to the csv file and then for a missing or broken photo, just add set the average colour to 
+`""`,instead of for example `"#123456"`
+
 ## 03april2021 missing photo with id: 49822659318  on the flickr server
 
 ```
