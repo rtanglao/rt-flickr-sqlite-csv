@@ -1,6 +1,22 @@
 # rt-flickr-sqlite-csv
 flickr api data in CSV and SQLite
 
+## 02april2021 using open3 to call imagemagick
+
+```ruby
+ magickimp = "magick convert  2020-12-31-01-12-41-50781630447-IMG_4248.jpg \
+irb(main):025:0" -resize 1x1 txt:- | ggrep -Po \"#[[:xdigit:]]{6}\""
+=> "magick convert  2020-12-31-01-12-41-50781630447-IMG_4248.jpg -resize 1x1 txt:- | ggrep -Po \"#[[:xdigi...
+irb(main):026:1*   Open3.popen2e(magickimp) do |stdin, stdout_stderr, wait_thread|
+irb(main):027:2*     Thread.new do
+irb(main):028:2*       stdout_stderr.each {|l| puts l }
+irb(main):029:1*     end
+irb(main):030:1*     stdin.close
+irb(main):031:1*     wait_thread.value
+irb(main):032:0>   end
+#58473A
+```
+
 ## 29march2021 use daff merge to merge in a CSV of average colours?
 
 * [daff](https://github.com/paulfitz/daff) might be better than `mlr` in this case!
