@@ -1,6 +1,20 @@
 # rt-flickr-sqlite-csv
 flickr api data in CSV and SQLite
 
+## 03april2021 csvjoin does add columns like i want
+
+```bash
+roland@Rolands-MacBook-Air THUMBS_75X75 % cat testcsv.csv 
+column1
+samplecolumn1value
+roland@Rolands-MacBook-Air THUMBS_75X75 % cat column2.csv 
+column2
+samplecolumn2value
+roland@Rolands-MacBook-Air THUMBS_75X75 % csvjoin testcsv.csv column2.csv
+column1,column2
+samplecolumn1value,samplecolumn2value
+```
+
 ## 03april20201 forgot about csvkit
 
 * https://github.com/wireservice/csvkit
