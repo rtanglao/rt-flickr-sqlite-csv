@@ -1,6 +1,14 @@
 # rt-flickr-sqlite-csv
 flickr api data in CSV and SQLite
 
+## 03april20201 forgot about csvkit
+
+* https://github.com/wireservice/csvkit
+* from [unix stackexchange](https://unix.stackexchange.com/questions/293775/merging-contents-of-multiple-csv-files-into-single-csv-file): 
+```bash
+csvstack *.csv  > out.csv
+``` 
+
 ## 03april2021 how to fix missing photo?
 * maybe just add the column to the csv file and then for a missing or broken photo, just add set the average colour to 
 `""`,instead of for example `"#123456"`
