@@ -1,7 +1,7 @@
 # rt-flickr-sqlite-csv
 flickr api data in CSV and SQLite
 
-## 03paril2021 how to fix missing photo?
+## 03april2021 how to fix missing photo?
 * maybe just add the column to the csv file and then for a missing or broken photo, just add set the average colour to 
 `""`,instead of for example `"#123456"`
 
@@ -15,7 +15,9 @@ D, [2021-04-03T00:06:30.710046 #55060] DEBUG -- : convert: insufficient image da
 
 ## 02april2021 after some regular expression fun and filenames with question marks have to be in double quotation marks
 
-* key ruby statements
+* key ruby statements:
+    * when shelling out filename has to have quotation marks around because of `?` and `!`, i.e. `convert \"%s\"`
+    * `$` has to be escaped with a `\` so use `gsub` i.e. `filename.gsub(/\$/, '\$'))`
 ```ruby
  #filename has to have quotation marks around it
  magickimp = sprintf("magick convert \"%s\" -resize 1x1 txt:- | ggrep -Po \"#[[:xdigit:]]{6}\"",
