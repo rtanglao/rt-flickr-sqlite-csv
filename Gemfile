@@ -8,3 +8,4 @@ gem 'typhoeus'
 gem 'awesome_print'
 gem 'csv'
 gem 'curb'
+gem "open3"
