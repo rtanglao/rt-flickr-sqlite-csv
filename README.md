@@ -1,6 +1,21 @@
 # rt-flickr-sqlite-csv
 flickr api data in CSV and SQLite
 
+02april2021 after some regular expression fun and filenames with question marks have to be in double quotation marks
+
+* key ruby statements
+```ruby
+ #filename has to have quotation marks around it
+ magickimp = sprintf("magick convert \"%s\" -resize 1x1 txt:- | ggrep -Po \"#[[:xdigit:]]{6}\"",
+    filename.gsub(/\$/, '\$')) # to convert dollar sign to \$
+ ```
+
+```bash
+bundle exec ../get-imagemagick-average-colour-from-75x75thumbnail.rb \
+../../files_too_big_for_github_rt-flickr-sqlite-csv/2020-and-2019-roland-flickr-metadata.csv\
+>imagemagick.average-colour-2020-and2019-roland-flickr-metadata.txt \
+2> stderr.imagemagick.average-colour-2020-and2019-roland-flickr-metadata.tx
+```
 ## 02april2021 using open3 to call imagemagick
 
 ### 2nd try which is cleaner
