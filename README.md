@@ -1,7 +1,43 @@
 # rt-flickr-sqlite-csv
 flickr api data in CSV and SQLite
 
-## 03paril2021 how to fix missing photo?
+## 03april2021 current plan
+* I don't trust myself :-)  to take the 100% care needed to get `csvjoin` to work, it's easy to mess up
+* so i will add the column from ruby and in fact have multiple columns
+    * synth_75sqfilename (the filename of the 75x75 thumbnail)
+    * synth_75imaveragecolour (average colour by resizing to 1x1 in imagemagick)
+    * synth_75sqisvalid (in case the thumbnail is not a valid jpeg or png), 1 = valid, 0 = invalid (there's only 1 invalid 75x75px thumbnail from all 45000 2019-2020 photos
+
+## 03april2021 csvjoin does add columns like i want
+
+```bash
+roland@Rolands-MacBook-Air THUMBS_75X75 % cat testcsv.csv 
+column1
+samplecolumn1value
+roland@Rolands-MacBook-Air THUMBS_75X75 % cat column2.csv 
+column2
+samplecolumn2value
+roland@Rolands-MacBook-Air THUMBS_75X75 % csvjoin testcsv.csv column2.csv
+column1,column2
+samplecolumn1value,samplecolumn2value
+```
+
+## 03april20201 forgot about csvkit
+
+* https://github.com/wireservice/csvkit
+* from [unix stackexchange](https://unix.stackexchange.com/questions/293775/merging-contents-of-multiple-csv-files-into-single-csv-file): 
+```bash
+csvstack *.csv  > out.csv
+``` 
+* and another example from unix stackexchange: https://superuser.com/questions/26834/how-to-join-two-csv-files/851612
+```bash
+csvjoin -c email id_email.csv email_name.csv
+```
+or
+```bash
+csvjoin -c 2,1 id_email.csv email_name.csv
+```
+## 03april2021 how to fix missing photo?
 * maybe just add the column to the csv file and then for a missing or broken photo, just add set the average colour to 
 `""`,instead of for example `"#123456"`
 
@@ -15,7 +51,9 @@ D, [2021-04-03T00:06:30.710046 #55060] DEBUG -- : convert: insufficient image da
 
 ## 02april2021 after some regular expression fun and filenames with question marks have to be in double quotation marks
 
-* key ruby statements
+* key ruby statements:
+    * when shelling out filename has to have quotation marks around because of `?` and `!`, i.e. `convert \"%s\"`
+    * also when shelling out `$` has to be escaped with a `\` so use `gsub` i.e. `filename.gsub(/\$/, '\$'))`
 ```ruby
  #filename has to have quotation marks around it
  magickimp = sprintf("magick convert \"%s\" -resize 1x1 txt:- | ggrep -Po \"#[[:xdigit:]]{6}\"",
