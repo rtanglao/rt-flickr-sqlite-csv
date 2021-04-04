@@ -1,6 +1,14 @@
 # rt-flickr-sqlite-csv
 flickr api data in CSV and SQLite
 
+## 03april2021 imagemagick average colour worked?!?
+
+```bash
+roland@Rolands-MacBook-Air THUMBS_75X75 % bundle exec ../get-filename-imagemagick-average-colour-from-75x75thumbnail.rb \
+../../files_too_big_for_github_rt-flickr-sqlite-csv/2020-and-2019-roland-flickr-metadata.csv \
+../../files_too_big_for_github_rt-flickr-sqlite-csv/2020-and-2019-roland-flickr-filename-imagemagick-avg-colour-metadata.csv
+```
+
 ## 03april2021 current plan
 * I don't trust myself :-)  to take the 100% care needed to get `csvjoin` to work, it's easy to mess up
 * so i will add the column from ruby and in fact have multiple columns
