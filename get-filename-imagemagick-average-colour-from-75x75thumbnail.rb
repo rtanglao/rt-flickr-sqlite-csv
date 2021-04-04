@@ -59,8 +59,11 @@ CSV.foreach(FILENAME, :headers => true) do |p|
   logger.debug p.ai
   csv_array.push(p)
 end
-headers = csv_array[0].keys
-FILENAME = sprintf("%s", ARGV[1])
-CSV.open(FILENAME, "w", write_headers: true, headers: headers) do |csv_object|
+
+logger.debug csv_array[0].to_hash.keys.ai
+headers = csv_array[0].to_hash.keys
+logger.debug headers.ai
+OUTPUT_FILENAME = sprintf("%s", ARGV[1])
+CSV.open(OUTPUT_FILENAME, "w", write_headers: true, headers: headers) do |csv_object|
   csv_array.each {|row_array| csv_object << row_array }
 end
