@@ -6,7 +6,7 @@ flickr api data in CSV and SQLite
 * so i will add the column from ruby and in fact have multiple columns
     * synth_75sqfilename (the filename of the 75x75 thumbnail)
     * synth_75imaveragecolour (average colour by resizing to 1x1 in imagemagick)
-    * synth_75sq_is_valid (in case the thumbnail is not a valid jpeg or png), 1 = valid, 0 = invalid (there's only 1 invalid 75x75px thumbnail from all 45000 2019-2020 photos
+    * synth_75sqisvalid (in case the thumbnail is not a valid jpeg or png), 1 = valid, 0 = invalid (there's only 1 invalid 75x75px thumbnail from all 45000 2019-2020 photos
 
 ## 03april2021 csvjoin does add columns like i want
 
