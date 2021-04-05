@@ -3,6 +3,8 @@ flickr api data in CSV and SQLite
 
 ## 03april2021 hilariously gnuplot works
 
+* see http://gnuplot.sourceforge.net/demo_4.4/image.1.gnu which is an example from: http://gnuplot.sourceforge.net/demo_4.4/image.html
+
 ```
 plot '2020-and-2019-roland-flickr-imagemagick-average-colours.rgb' binary array=222x222 flipy format='%uchar' with rgbimage
 ```
@@ -39,7 +41,7 @@ magick convert -depth 8  -size 222x222 2020-and-2019-roland-flickr-imagemagick-a
 * fails on ubuntu 20.04 with convert and on macOS catalina with magick:
 
 ```bash
- convert -size 222x222 -depth 8 RGB:2020-and-2019-roland-flickr-imagemagick-average-colours.rgb image.png
+convert -size 222x222 -depth 8 RGB:2020-and-2019-roland-flickr-imagemagick-average-colours.rgb image.png
 convert-im6.q16: unexpected end-of-file `2020-and-2019-roland-flickr-imagemagick-average-colours.rgb': No such file or directory @ error/rgb.c/ReadRGBImage/242.
 convert-im6.q16: no images defined `image.png' @ error/convert.c/ConvertImageCommand/3258.
 ```
