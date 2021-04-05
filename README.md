@@ -21,6 +21,12 @@ mlr --csv cut -f synth_75imaveragecolour \
 xxd -r -p 2020-and-2019-roland-flickr-imagemagick-average-colours.txt \
 2020-and-2019-roland-flickr-imagemagick-average-colours.rgb
 ```
+* 3\. create png
+* square root of 49549 is approximately 222
+```bash
+magick convert -depth 8  -size 222x222 2020-and-2019-roland-flickr-imagemagick-average-colours.rgb\
+ 2020-and-2019-roland-flickr-imagemagick-average-colours.png
+```
 ## 03april2021 imagemagick average colour worked?!?
 
 ```bash
