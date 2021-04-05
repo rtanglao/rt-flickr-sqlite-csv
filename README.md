@@ -1,6 +1,30 @@
 # rt-flickr-sqlite-csv
 flickr api data in CSV and SQLite
 
+## 03april2021 create file of colours and then raw file and then png
+
+* remove the one bad file which has `synth_75sqisvalid` set to `0` aka `false`
+```bash
+mlr --csv cut -f synth_75imaveragecolour,synth_75sqisvalid \
+../../files_too_big_for_github_rt-flickr-sqlite-csv/2020-and-2019-roland-flickr-filename-imagemagick-avg-colour-metadata.csv\
+| grep -v ",0" | wc -l
+49549
+mlr --csv cut -f synth_75imaveragecolour,synth_75sqisvalid \
+../../files_too_big_for_github_rt-flickr-sqlite-csv/2020-and-2019-roland-flickr-filename-imagemagick-avg-colour-metadata.csv\
+> 2020-and-2019-roland-flickr-imagemagick-average-colours.csv
+mlr --csv cut -f synth_75imaveragecolour \
+>  2020-and-2019-roland-flickr-imagemagick-average-colours.csv\
+>  | tail -n +2 >2020-and-2019-roland-flickr-imagemagick-average-colours.txt
+```
+
+## 03april2021 imagemagick average colour worked?!?
+
+```bash
+roland@Rolands-MacBook-Air THUMBS_75X75 % bundle exec ../get-filename-imagemagick-average-colour-from-75x75thumbnail.rb \
+../../files_too_big_for_github_rt-flickr-sqlite-csv/2020-and-2019-roland-flickr-metadata.csv \
+../../files_too_big_for_github_rt-flickr-sqlite-csv/2020-and-2019-roland-flickr-filename-imagemagick-avg-colour-metadata.csv
+```
+
 ## 03april2021 current plan
 * I don't trust myself :-)  to take the 100% care needed to get `csvjoin` to work, it's easy to mess up
 * so i will add the column from ruby and in fact have multiple columns
