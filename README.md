@@ -1,6 +1,12 @@
 # rt-flickr-sqlite-csv
 flickr api data in CSV and SQLite
 
+## 03april2021 hilariouslhy gnuplut works
+
+```
+plot '2020-and-2019-roland-flickr-imagemagick-average-colours.rgb' binary array=222x222 flipy format='%uchar' with rgbimage
+```
+
 ## 03april2021 create file of colours and then raw file and then png
 
 * 1\. remove the one bad file which has `synth_75sqisvalid` set to `0` aka `false`
