@@ -33,6 +33,14 @@ xxd -r -p 2020-and-2019-roland-flickr-imagemagick-average-colours.txt \
 magick convert -depth 8  -size 222x222 2020-and-2019-roland-flickr-imagemagick-average-colours.rgb\
  2020-and-2019-roland-flickr-imagemagick-average-colours.png
 ```
+* fails on ubuntu 20.04 with convert and on macOS catalina with magick:
+
+```bash
+ convert -size 222x222 -depth 8 RGB:2020-and-2019-roland-flickr-imagemagick-average-colours.rgb image.png
+convert-im6.q16: unexpected end-of-file `2020-and-2019-roland-flickr-imagemagick-average-colours.rgb': No such file or directory @ error/rgb.c/ReadRGBImage/242.
+convert-im6.q16: no images defined `image.png' @ error/convert.c/ConvertImageCommand/3258.
+```
+
 ## 03april2021 imagemagick average colour worked?!?
 
 ```bash
