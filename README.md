@@ -3,7 +3,7 @@ flickr api data in CSV and SQLite
 
 ## 03april2021 create file of colours and then raw file and then png
 
-* remove the one bad file which has `synth_75sqisvalid` set to `0` aka `false`
+* 1\. remove the one bad file which has `synth_75sqisvalid` set to `0` aka `false`
 ```bash
 mlr --csv cut -f synth_75imaveragecolour,synth_75sqisvalid \
 ../../files_too_big_for_github_rt-flickr-sqlite-csv/2020-and-2019-roland-flickr-filename-imagemagick-avg-colour-metadata.csv\
@@ -16,7 +16,11 @@ mlr --csv cut -f synth_75imaveragecolour \
 >  2020-and-2019-roland-flickr-imagemagick-average-colours.csv\
 >  | tail -n +2 >2020-and-2019-roland-flickr-imagemagick-average-colours.txt
 ```
-
+* 2\. create raw file
+```bash
+xxd -r -p 2020-and-2019-roland-flickr-imagemagick-average-colours.txt \
+2020-and-2019-roland-flickr-imagemagick-average-colours.rgb
+```
 ## 03april2021 imagemagick average colour worked?!?
 
 ```bash
