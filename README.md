@@ -1,7 +1,7 @@
 # rt-flickr-sqlite-csv
 flickr api data in CSV and SQLite
 
-## 03april2021 hilariouslhy gnuplut works
+## 03april2021 hilariouslhy gnuplot works
 
 ```
 plot '2020-and-2019-roland-flickr-imagemagick-average-colours.rgb' binary array=222x222 flipy format='%uchar' with rgbimage
