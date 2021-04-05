@@ -24,8 +24,11 @@ mlr --csv cut -f synth_75imaveragecolour \
 ```
 * 2\. create raw file
 ```bash
-xxd -r -p 2020-and-2019-roland-flickr-imagemagick-average-colours.txt \
+#xxd -r -p 2020-and-2019-roland-flickr-imagemagick-average-colours.txt \
 2020-and-2019-roland-flickr-imagemagick-average-colours.rgb
+# 222 x 222 = 49284
+xxd -l 49284 -u -r -p \
+2020-and-2019-roland-flickr-imagemagick-average-colours.txt 2020-and-2019-roland-flickr-imagemagick-average-colours.rgb
 ```
 * 3\. create png
 * square root of 49549 is approximately 222
