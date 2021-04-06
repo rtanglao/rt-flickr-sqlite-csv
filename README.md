@@ -1,6 +1,16 @@
 # rt-flickr-sqlite-csv
 flickr api data in CSV and SQLite
 
+## 05april2021 still not sure why imagemagick doesn't work, maybe because the header is missing or maybe because it doesn't end with '.raw'?
+* add the header as per this stack overflow question, [Converting raw images without headers](https://stackoverflow.com/questions/62602215/converting-raw-images-without-headers)?
+```bash
+{ printf "P6\n%d %d\n255\n" WIDTH HEIGHT ; cat YOURFILE; } > result.ppm
+```
+* or use `ffmpeg` as per this stack overflow question, [Convert raw RGB32 file to JPEG or PNG using FFmpeg](https://stackoverflow.com/questions/46310408/convert-raw-rgb32-file-to-jpeg-or-png-using-ffmpeg)?
+```bash
+ffmpeg -f rawvideo -pixel_format rgba -video_size 320x240 -i input.raw output.png #i would use rgb instead of rgba
+```
+
 ## 05april2021 the file has to be called .raw to be opened in photoshop in interleaved mode
 
 * renamed `2020-and-2019-roland-flickr-imagemagick-average-colours.rgb` to:
