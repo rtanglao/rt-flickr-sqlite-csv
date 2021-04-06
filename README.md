@@ -1,6 +1,11 @@
 # rt-flickr-sqlite-csv
 flickr api data in CSV and SQLite
 
+## 05april2021 the file has to be called .raw to be opened in photoshop in interleaved mode
+
+* renamed `2020-and-2019-roland-flickr-imagemagick-average-colours.rgb` to:
+`2020-and-2019-roland-flickr-imagemagick-average-colours.raw` and opened in photoshop in interleaved mode, 3 channels, 222x222pixels and it worked!
+
 ## 03april2021 hilariously gnuplot works
 
 * see http://gnuplot.sourceforge.net/demo_4.4/image.1.gnu which is an example from: http://gnuplot.sourceforge.net/demo_4.4/image.html
