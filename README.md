@@ -5,6 +5,8 @@ flickr api data in CSV and SQLite
 
 * renamed `2020-and-2019-roland-flickr-imagemagick-average-colours.rgb` to:
 `2020-and-2019-roland-flickr-imagemagick-average-colours.raw` and opened in photoshop in interleaved mode, 3 channels, 222x222pixels and it worked!
+* here is the PNG which worked: https://github.com/rtanglao/rt-flickr-sqlite-csv/blob/main/THUMBS_75X75/interlaced-2020-and-2019-roland-flickr-imagemagick-average-colours.png
+* if you select non interleaved mode, then it doesn't work but you get glorious glitch art: https://github.com/rtanglao/rt-flickr-sqlite-csv/blob/main/THUMBS_75X75/2020-and-2019-roland-flickr-imagemagick-average-colours.png
 
 ## 03april2021 hilariously gnuplot works
 
