@@ -3,7 +3,9 @@ flickr api data in CSV and SQLite
 
 ## 05april2021 i think i figured out a photoshop-less solution
 ```bash
- ffmpeg -f rawvideo -pixel_format rgb24 -video_size 222x222 -i 2020-and-2019-roland-flickr-imagemagick-average-colours.raw -frames:v 1  output.png
+ ffmpeg -f rawvideo -pixel_format rgb24 -video_size 222x222 \
+ -i 2020-and-2019-roland-flickr-imagemagick-average-colours.raw -frames:v 1 output.png
+ mv output.png ffmpeg-2020-and-2019-roland-flick-average-colour-output.png
  ```
 ## 05april2021 still not sure why imagemagick doesn't work, maybe because the header is missing or maybe because it doesn't end with '.raw'?
 * add the header as per this stack overflow question, [Converting raw images without headers](https://stackoverflow.com/questions/62602215/converting-raw-images-without-headers)?
