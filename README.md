@@ -1,6 +1,13 @@
 # rt-flickr-sqlite-csv
 flickr api data in CSV and SQLite
 
+## 06april2021 another photoshop-less solution using printf to add a header and convert to ppm. Then use magick to convert to png
+
+```bash
+{ printf "P6\n%d %d\n255\n" 222 222 ; cat no-filetype-2020-and-2019-roland-flickr-imagemagick-average-colours; } > result.ppm
+magick result.ppm result.png
+```
+
 ## 05april2021 i think i figured out a photoshop-less solution
 ```bash
  ffmpeg -f rawvideo -pixel_format rgb24 -video_size 222x222 \
