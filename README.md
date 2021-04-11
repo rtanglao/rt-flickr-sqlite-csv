@@ -1,7 +1,7 @@
 # rt-flickr-sqlite-csv
 flickr api data in CSV and SQLite
 
-## 10april20201 magick and magick convert don't work on Ubuntu 20.04 Version: ImageMagick 7.0.11-6 Q16 x86_64 2021-04-03 but convert works
+## 10april20201 magick and magick convert work on macOS but don't work on Ubuntu 20.04 Version: ImageMagick 7.0.11-6 Q16 x86_64 2021-04-03  convert works on both
 * The following does work on macOS catalina: `Version: ImageMagick 7.0.11-6 Q16 x86_64 2021-04-03 https://imagemagick.org
 `
 * `convert` from imagemagick version 6 works:
