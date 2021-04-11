@@ -13,6 +13,7 @@ magick: unable to read image data `/var/folders/h0/m31kq8415wb50xg_7kwk06h40000g
 %
 ```
 ## 10april2021 magick and magick convert work on macOS but don't work on Ubuntu 20.04 Version: ImageMagick 7.0.11-6 Q16 x86_64 2021-04-03  convert works on both
+* Maybe I built imagemagick 7 incorrectly on ubuntu 20.04?!?
 * The following does work on macOS catalina: `Version: ImageMagick 7.0.11-6 Q16 x86_64 2021-04-03 https://imagemagick.org
 `
 * `convert` from imagemagick version 6 works:
