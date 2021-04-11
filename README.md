@@ -1,7 +1,18 @@
 # rt-flickr-sqlite-csv
 flickr api data in CSV and SQLite
 
-# 10april2021 two extra bytes fixes it, i am not sure why?!?!
+## 10april20201 magick and magick convert don't work but convert works
+* `convert` from imagemagick version 6 works:
+```bash
+{ printf "P6\n%d %d\n255\n" 222 222 ; cat no-filetype-2020-and-2019-roland-flickr-imagemagick-average-colours; } \
+| convert - image88.png
+```
+* `magick convert` from im7 does NOT work:
+```bash
+ printf "P6\n%d %d\n255\n" 222 222 ; cat no-filetype-2020-and-2019-roland-flickr-imagemagick-average-colours; } \
+ | magick convert - image88.png
+```
+## 10april2021 two extra bytes fixes it, i am not sure why?!?!
 
 * maybe it's a 64 bit issue? endian issue?
 * 222 * 222 = 49284. Not sure why we need two extra 3 byte lines
