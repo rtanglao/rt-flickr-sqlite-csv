@@ -1,7 +1,17 @@
 # rt-flickr-sqlite-csv
 flickr api data in CSV and SQLite
 
-## 10april20201 magick and magick convert work on macOS but don't work on Ubuntu 20.04 Version: ImageMagick 7.0.11-6 Q16 x86_64 2021-04-03  convert works on both
+## 11april2021 i really need those two bytes but i don't understand why!
+* Again :-) I don't understand why since 222*222 = 49,284
+```bash
+% { printf "P6\n%d %d\n255\n" 222 222 ; cat 1st-49284-2020-2019-roland-flickr-average-colours.rgb} \
+| magick  - image88.png
+magick: unable to read image data `/var/folders/h0/m31kq8415wb50xg_7kwk06h40000gn/T/magick-2mCuD6a8H66a7qb5_WpeXHJ3uph3P9pv' @ error/pnm.c/ReadPNMImage/1442.
+% { printf "P6\n%d %d\n255\n" 222 222 ; cat 1st-49286-2020-2019-roland-flickr-average-colours.rgb} \
+| magick  - image88.png
+%
+```
+## 10april2021 magick and magick convert work on macOS but don't work on Ubuntu 20.04 Version: ImageMagick 7.0.11-6 Q16 x86_64 2021-04-03  convert works on both
 * The following does work on macOS catalina: `Version: ImageMagick 7.0.11-6 Q16 x86_64 2021-04-03 https://imagemagick.org
 `
 * `convert` from imagemagick version 6 works:
