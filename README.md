@@ -2,6 +2,8 @@
 flickr api data in CSV and SQLite
 
 ## 10april20201 magick and magick convert don't work but convert works
+* The following does work on macOS catalina: `Version: ImageMagick 7.0.11-6 Q16 x86_64 2021-04-03 https://imagemagick.org
+`
 * `convert` from imagemagick version 6 works:
 ```bash
 { printf "P6\n%d %d\n255\n" 222 222 ; cat no-filetype-2020-and-2019-roland-flickr-imagemagick-average-colours; } \
