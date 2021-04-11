@@ -2,7 +2,7 @@
 flickr api data in CSV and SQLite
 
 # 10april2021 two extra bytes fixes it, i am not sure why?!?!
-maybe it's a 64 bit issue? endian issue>
+maybe it's a 64 bit issue? endian issue?
 
 ```bash
 head -n 49286 2020-and-2019-roland-flickr-imagemagick-average-colours.txt \
