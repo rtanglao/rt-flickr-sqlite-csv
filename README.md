@@ -11,6 +11,11 @@ flickr api data in CSV and SQLite
 ```bash
  printf "P6\n%d %d\n255\n" 222 222 ; cat no-filetype-2020-and-2019-roland-flickr-imagemagick-average-colours; } \
  | magick convert - image88.png
+ ```
+ * `magick` from im7 does NOT work:
+ ```bash
+  printf "P6\n%d %d\n255\n" 222 222 ; cat no-filetype-2020-and-2019-roland-flickr-imagemagick-average-colours; } \
+  | magick  - image88.png
 ```
 ## 10april2021 two extra bytes fixes it, i am not sure why?!?!
 
