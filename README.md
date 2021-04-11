@@ -1,20 +1,34 @@
 # rt-flickr-sqlite-csv
 flickr api data in CSV and SQLite
 
+# 10april2021 two extra bytes fixes it, i am not sure why?!?!
+maybe it's a 64 bit issue? endian issue>
+
+```bash
+head -n 49286 2020-and-2019-roland-flickr-imagemagick-average-colours.txt \
+> 1st-49286-2020-2019-roland-flickr-average-colours.txt
+xxd -r -p 1st-49286-2020-2019-roland-flickr-average-colours.txt \
+1st-49286-2020-2019-roland-flickr-average-colours.rgb
+convert -size 222x222 -depth 8 1st-49286-2020-2019-roland-flickr-average-colours.rgb \
+image88.png
+```
+
+
 # 10april2021 missing two bytes in the rgb file?!?
 
 ```bash
 convert result.png result.rgb
-hexdump 1st-49284-2020-2019-roland-flickr-average-colours.rgb > 1st-49284-2020-2019-roland-flickr-average-colours.hexdump
+hexdump 1st-49284-2020-2019-roland-flickr-average-colours.rgb \
+> 1st-49284-2020-2019-roland-flickr-average-colours.hexdump
 hexdump result.rgb > result.hexdump
-roland@roland-XPS-13-9310:~/GIT/rt-flickr-sqlite-csv/THUMBS_75X75$ diff 1st-49284-2020-2019-roland-flickr-average-colours.hexdump result.hexdump
+diff 1st-49284-2020-2019-roland-flickr-average-colours.hexdump result.hexdump
 9241,9242c9241,9242
 < 0024180 1312 1019 120f 140b 004a               
 < 0024189
 ---
 > 0024180 1312 1019 120f 140b 694a aa83          
 > 002418c
-roland@roland-XPS-13-9310:~/GIT/rt-flickr-sqlite-csv/THUMBS_75X75$ tail -3 1st-49284-2020-2019-roland-flickr-average-colours.txt
+tail -3 1st-49284-2020-2019-roland-flickr-average-colours.txt
 #121319
 #100F12
 #0B144A
