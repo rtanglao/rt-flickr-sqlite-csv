@@ -2,8 +2,9 @@
 flickr api data in CSV and SQLite
 
 # 10april2021 two extra bytes fixes it, i am not sure why?!?!
-maybe it's a 64 bit issue? endian issue?
 
+* maybe it's a 64 bit issue? endian issue?
+* 222 * 222 = 49284. Not sure why we need two extra 3 byte lines
 ```bash
 head -n 49286 2020-and-2019-roland-flickr-imagemagick-average-colours.txt \
 > 1st-49286-2020-2019-roland-flickr-average-colours.txt
