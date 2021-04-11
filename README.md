@@ -1,8 +1,9 @@
 # rt-flickr-sqlite-csv
 flickr api data in CSV and SQLite
 
-## 11april2021 i really need those two bytes but i don't understand why!
+## 11april2021 i really need those two extra bytes but i don't understand why!
 * Again :-) I don't understand why since 222*222 = 49,284
+* Perhaps 64 bit boundary? Or little endian? big endian?
 ```bash
 % { printf "P6\n%d %d\n255\n" 222 222 ; cat 1st-49284-2020-2019-roland-flickr-average-colours.rgb} \
 | magick  - image88.png
