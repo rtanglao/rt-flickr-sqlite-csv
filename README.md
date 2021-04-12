@@ -1,7 +1,7 @@
 # rt-flickr-sqlite-csv
 flickr api data in CSV and SQLite
 
-## 11april2021 i really need those two extra bytes but i don't understand why!
+## 11april2021 i really need those two* * three = 6 extra bytes but i don't understand why!
 * Again :-) I don't understand why since 222*222 = 49,284
 * Perhaps 64 bit boundary? Or little endian? big endian?
 ```bash
@@ -31,7 +31,7 @@ magick: unable to read image data `/var/folders/h0/m31kq8415wb50xg_7kwk06h40000g
   printf "P6\n%d %d\n255\n" 222 222 ; cat no-filetype-2020-and-2019-roland-flickr-imagemagick-average-colours; } \
   | magick  - image88.png
 ```
-## 10april2021 two extra bytes fixes it, i am not sure why?!?!
+## 10april2021 two * three = 6 extra bytes fixes it, i am not sure why?!?!
 
 * maybe it's a 64 bit issue? endian issue?
 * 222 * 222 = 49284. Not sure why we need two extra 3 byte lines
@@ -45,7 +45,7 @@ image88.png
 ```
 
 
-# 10april2021 missing two bytes in the rgb file?!?
+# 10april2021 missing two * three = 6 bytes in the rgb file?!?
 
 ```bash
 convert result.png result.rgb
