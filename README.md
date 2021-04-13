@@ -1,6 +1,21 @@
 # rt-flickr-sqlite-csv
 flickr api data in CSV and SQLite
 
+## 12april2021 figure it out, it's my non clean data :-)
+* remove the one row i.e. row 19907 without a thumbnail and therefore without an average colour and then go from there!
+```bash
+grep  "#" 2020-and-2019-roland-flickr-imagemagick-average-colours.txt \
+> missing-thumbnail-with-missing-avgcolour-removed-2020-and-2019-roland-flickr-imagemagick-average-colours.txt
+head -n 49284 missing-thumbnail-with-missing-avgcolour-removed-2020-and-2019-roland-flickr-imagemagick-average-colours.txt \
+>49284-missing-thumbnail-with-missing-avgcolour-removed-2020-and-2019-roland-flickr-imagemagick-average-colours.txt
+xxd -l 49284 -u -r -p \
+49284-missing-thumbnail-with-missing-avgcolour-removed-2020-and-2019-roland-flickr-imagemagick-average-colours.txt \
+> 49284-missing-thumbnail-with-missing-avgcolour-removed-2020-and-2019-roland-flickr-imagemagick-average-colours.rgb
+magick convert -depth 8 -size 222x222 \
+49284-missing-thumbnail-with-missing-avgcolour-removed-2020-and-2019-roland-flickr-imagemagick-average-colours.rgb \
+49284-missing-thumbnail-with-missing-avgcolour-removed-2020-and-2019-roland-flickr-imagemagick-average-colours.png
+```
+
 ## 12april2021 probably not an imagemagick but a bug in my data aka i forgot that the average colour is missing for 1 row!
 
 * row 19907 doesn't have an average colour because flickr doesn't have a thumbnail!
