@@ -11,7 +11,7 @@ head -n 49284 missing-thumbnail-with-missing-avgcolour-removed-2020-and-2019-rol
 xxd -l 49284 -u -r -p \
 49284-missing-thumbnail-with-missing-avgcolour-removed-2020-and-2019-roland-flickr-imagemagick-average-colours.txt \
 > 49284-missing-thumbnail-with-missing-avgcolour-removed-2020-and-2019-roland-flickr-imagemagick-average-colours.rgb
-magick convert -depth 8 -size 222x222 \
+magick -depth 8 -size 222x222 \
 49284-missing-thumbnail-with-missing-avgcolour-removed-2020-and-2019-roland-flickr-imagemagick-average-colours.rgb \
 49284-missing-thumbnail-with-missing-avgcolour-removed-2020-and-2019-roland-flickr-imagemagick-average-colours.png
 ```
