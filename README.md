@@ -1,7 +1,7 @@
 # rt-flickr-sqlite-csv
 flickr api data in CSV and SQLite
 
-## 12april2021 figure it out, it's my non clean data :-)
+## 12april2021 figured it out, it's my non clean data :-)
 * remove the one row i.e. row 19907 without a thumbnail and therefore without an average colour and then go from there!
 ```bash
 grep  "#" 2020-and-2019-roland-flickr-imagemagick-average-colours.txt \
