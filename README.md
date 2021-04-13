@@ -1,6 +1,20 @@
 # rt-flickr-sqlite-csv
 flickr api data in CSV and SQLite
 
+## 12april2021 probably not an imagemagick but a bug in my data aka i forgot that the average colour is missing for 1 row!
+
+* row 19907 doesn't have an average colour because flickr doesn't have a thumbnail!
+```bash
+% grep -C 3 -vn "#" 1st-49284-2020-2019-roland-flickr-average-colours.txt 
+19904-#333436
+19905-#AAABAD
+19906-#AFAFAF
+19907:
+19908-#A7A9AA
+19909-#B7B8B7
+19910-#B5B6B6
+```
+
 ## 11april2021 i really need those two* * three = 6 extra bytes but i don't understand why!
 * Again :-) I don't understand why since 222*222 = 49,284
 * Perhaps 64 bit boundary? Or little endian? big endian?
