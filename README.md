@@ -12,8 +12,8 @@ mlr --csv cut -f synth_75imaveragecolour,synth_75sqisvalid \
 * RIGHT filter out the row without average colour (untested but should work) :
 ```bash
 mlr --csv cut -f synth_75imaveragecolour,synth_75sqisvalid \
-../../files_too_big_for_github_rt-flickr-sqlite-csv/2020-and-2019-roland-flickr-filename-imagemagick-avg-colour-metadata.csv\
-grep -v ",0" |\
+../../files_too_big_for_github_rt-flickr-sqlite-csv/2020-and-2019-roland-flickr-filename-imagemagick-avg-colour-metadata.csv |\
+grep -v ",0" \
 > 2020-and-2019-roland-flickr-imagemagick-average-colours.csv
 ```
 ## 12april2021 figured it out, it's my non clean data :-)
