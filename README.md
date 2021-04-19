@@ -1,6 +1,21 @@
 # rt-flickr-sqlite-csv
 flickr api data in CSV and SQLite
 
+## 18april2021 unclean data came from me forgetting to filter out the 1 row without average colour!
+* tl;dr `2020-and-2019-roland-flickr-imagemagick-average-colours.csv` has 1 row without average colour because I forgot to filter it out
+* WRONG i.e. what I actually did :-) :
+```bash
+mlr --csv cut -f synth_75imaveragecolour,synth_75sqisvalid \
+../../files_too_big_for_github_rt-flickr-sqlite-csv/2020-and-2019-roland-flickr-filename-imagemagick-avg-colour-metadata.csv\
+> 2020-and-2019-roland-flickr-imagemagick-average-colours.csv
+```
+* RIGHT filter out the row without average colour (untested but should work) :
+```bash
+mlr --csv cut -f synth_75imaveragecolour,synth_75sqisvalid \
+../../files_too_big_for_github_rt-flickr-sqlite-csv/2020-and-2019-roland-flickr-filename-imagemagick-avg-colour-metadata.csv\
+grep -v ",0" |\
+> 2020-and-2019-roland-flickr-imagemagick-average-colours.csv
+```
 ## 12april2021 figured it out, it's my non clean data :-)
 * remove the one row i.e. row 19907 without a thumbnail and therefore without an average colour and then go from there!
 ```bash
