@@ -1,7 +1,9 @@
 # rt-flickr-sqlite-csv
 flickr api data in CSV and SQLite
 
-## 18april2021 how to add the 657  built in colors to the flickr dataset
+## 18april2021 how to add the 657 built in R colors to the flickr dataset
+* the dataset withe R colors is on dropbox:
+https://www.dropbox.com/s/sfooyejehxus7rq/2020-and-2019-roland-flickr-filename-imavgcolour-plotrixavgcolour-metadata.csv?dl=0
 * need `rowwise()` otherwise it computes the color of all the rows not row by row!
 ```R
 library(tidyverse)
