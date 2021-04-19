@@ -6,8 +6,8 @@ flickr api data in CSV and SQLite
 ```R
 library(tidyverse)
 library(plotrix)
-df <- read_csv("\
-https://www.dropbox.com/s/km9r94fz2ixknc7/2020-and-2019-roland-flickr-filename-imagemagick-avg-colour-metadata.csv?dl=1")
+df <- read_csv(\
+"https://www.dropbox.com/s/km9r94fz2ixknc7/2020-and-2019-roland-flickr-filename-imagemagick-avg-colour-metadata.csv?dl=1")
 df_with_plotrix_colour <- df %>% 
   rowwise() %>% 
   mutate(synth_plotrixcolour = 
