@@ -15,6 +15,10 @@ flickr api data in CSV and SQLite
 [1] 13639824
 > getnumericColour("yellow2")
 [1] 15658496
+> as.hexmode(getnumericColour("yellow2"))
+[1] "eeee00"
+> str(as.hexmode(getnumericColour("yellow2")))
+ 'hexmode' int eeee00
 ```
 
 ## 18april2021 how to add the 657 built in R colors to the flickr dataset
