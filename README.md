@@ -1,6 +1,22 @@
 # rt-flickr-sqlite-csv
 flickr api data in CSV and SQLite
 
+## 21april2021 convert the 657 colours back to integer values
+
+```R
+> getnumericColour <-
++     function(colorname) {
++         colour_matrix=col2rgb(colorname)
++         return(as.numeric(colour_matrix[1,1]) * 65536 +
++                    as.numeric(colour_matrix[2,1]) * 256 +
++                    as.numeric(colour_matrix[3,1]))
++     }
+> getnumericColour("violetred")
+[1] 13639824
+> getnumericColour("yellow2")
+[1] 15658496
+```
+
 ## 18april2021 how to add the 657 built in R colors to the flickr dataset
 * the dataset withe R colors is on dropbox:
 https://www.dropbox.com/s/sfooyejehxus7rq/2020-and-2019-roland-flickr-filename-imavgcolour-plotrixavgcolour-metadata.csv?dl=0
