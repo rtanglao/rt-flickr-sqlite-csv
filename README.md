@@ -1,6 +1,18 @@
 # rt-flickr-sqlite-csv
 flickr api data in CSV and SQLite
 
+## 09may2021 convert to PNG via RGB
+
+and the PNG file looks like the previous one, but it only has 657 colours!
+
+```bash
+< 2020-and-2019-roland-flickr-imagemagick-r-plotrix-average-colours.csv | \
+tail -n +2 | head -n 49284 | \
+xxd -r -p >roland-2020-and-2019-r-colours-222x222.rgb 
+magick -size 222x222 -depth 8 roland-2020-and-2019-r-colours-222x222.rgb \
+roland-2020-and-2019-r-colours-222x222.png
+```
+
 ## 09may2021 get all colours as integers using R's 657 colours
 
 ```R
