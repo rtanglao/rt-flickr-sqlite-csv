@@ -37,7 +37,9 @@ write_csv(df_with_integer_plotrix_colour, "/Users/roland/Documents/GIT/files_too
  and then in the shell:
 ```bash
 mlr --csv cut -f synth_intplotrixcolour,synth_75sqisvalid \
-../../files_too_big_for_github_rt-flickr-sqlite-csv/2020-and-2019-roland-flickr-filename-integer-imavgcolour-plotrixavgcolour-metadata.csv | grep -v "0," > 2020-and-2019-roland-flickr-imagemagick-r-plotrix-average-colours.csv
+../../files_too_big_for_github_rt-flickr-sqlite-csv/2020-and-2019-roland-flickr-filename-integer-imavgcolour-plotrixavgcolour-metadata.csv \
+| grep -v "0," \
+> 2020-and-2019-roland-flickr-imagemagick-r-plotrix-average-colours.csv
 ```
 
 ## 21april2021 convert the 657 colours back to integer values
