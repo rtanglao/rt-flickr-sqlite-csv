@@ -24,5 +24,12 @@ write_csv(df_with_plotrix_colour, "/Users/roland/Documents/GIT/files_too_big_for
 df_with_integer_plotrix_colour <- df_with_plotrix_colour %>%
   rowwise() %>%
   mutate(synth_intplotrixcolour =
-           if_else(synth_75imaveragecolour == "<NA>", as.hexmode(0), getnumericColour(synth_plotrixcolour)))
+           getnumericColour(synth_plotrixcolour))
 write_csv(df_with_integer_plotrix_colour, "/Users/roland/Documents/GIT/files_too_big_for_github_rt-flickr-sqlite-csv/2020-and-2019-roland-flickr-filename-integer-imavgcolour-plotrixavgcolour-metadata.csv", na="")
+# testing with just two rows
+tibble_with_two_rows <- df_with_integer_plotrix_colour[19906:19907,]
+t_81_columns <- tibble_with_two_rows %>% 
+  rowwise() %>% 
+  mutate(synth_88 =
+           ifelse(synth_75sqisvalid == 0, 0, getnumericColour(synth_75imaveragecolour))
+  )
