@@ -1,6 +1,9 @@
 # rt-flickr-sqlite-csv
 flickr api data in CSV and SQLite
 
+## 13september2021
+
+* running [theme-void-create-flickr-roland-2019-2020-average-colour-by-the-second-scale-free.R](https://github.com/rtanglao/rt-flickr-sqlite-csv/blob/main/theme-void-create-flickr-roland-2019-2020-average-colour-by-the-second-scale-free.R) creates [8000px-flickr-roland-2019-2020-average-colour-by-the-second-scale-free.png](https://github.com/rtanglao/rt-flickr-sqlite-csv/blob/main/OUTPUT_GRAPHICS/theme-void-8000px-flickr-roland-2019-2020-average-colour-by-the-second-scale-free.png)
 ## 13september2021 write a smaller dataset
 
 * 1\. write a CSV file with pacific time zone yyyy-mm-dd
