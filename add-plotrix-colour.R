@@ -1,5 +1,14 @@
 library(tidyverse)
 library(plotrix)
+noNilCheckGetnumericColour <-
+  function(colourname) {
+    colour_matrix = col2rgb(colourname)
+    return(
+      as.numeric(colour_matrix[1, 1]) * 65536 +
+        as.numeric(colour_matrix[2, 1]) * 256 +
+        as.numeric(colour_matrix[3, 1])
+    )
+  }
 getnumericColour <-
   function(colourname) {
     if (colourname == "") {
@@ -31,5 +40,6 @@ tibble_with_two_rows <- df_with_integer_plotrix_colour[19906:19907,]
 t_81_columns <- tibble_with_two_rows %>% 
   rowwise() %>% 
   mutate(synth_88 =
-           ifelse(synth_75sqisvalid == 0, 0, getnumericColour(synth_75imaveragecolour))
-  )
+           ifelse(synth_75sqisvalid == 0, NA_integer_, noNilCheckGetnumericColour(synth_plotrixcolour))
+  ) %>% 
+  mutate(synth_88 = as.hexmode(synth_88))
