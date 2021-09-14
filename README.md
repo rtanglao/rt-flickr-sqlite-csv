@@ -3,8 +3,11 @@ flickr api data in CSV and SQLite
 
 ## 13september2021 write a smaller dataset
 
+* 1\. write a CSV file with pacific time zone yyyy-mm-dd
 ```r
-write_csv(pacific_df_with_plotrix_colour_unixtime_dt,"/Users/roland/Documents/GIT/rt-flickr-sqlite-csv/LARGE_CSV_FILES/pacific-yyyy-mm-dd-2020-and-2019-roland-flickr-filename-imavgcolour-plotrixavgcolour-unixtimedt.csv", na="")
+write_csv(pacific_df_with_plotrix_colour_unixtime_dt,
+"/Users/roland/Documents/GIT/rt-flickr-sqlite-csv/LARGE_CSV_FILES/pacific-yyyy-mm-dd-2020-and-2019-roland-flickr-filename-imavgcolour-plotrixavgcolour-unixtimedt.csv",
+na="")
 ```
 
 ## 09may2021 convert to PNG via RGB
