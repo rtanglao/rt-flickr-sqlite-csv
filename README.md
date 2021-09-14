@@ -11,9 +11,9 @@ na="")
 ```
 * 2\. write a CSV file with only the columns we need
 ```bash
-mlr --csv cut -f datetaken,synth_plotrixcolour,synth_75sqisvalid,pacific_ymd\                      
- pacific-yyyy-mm-dd-2020-and-2019-roland-flickr-filename-imavgcolour-plotrixavgcolour-unixtimedt.csv |\
-grep -v "0," > pacific-yyyy-mm-dd-2020-2019-roland-flickr-datetaken-synth_75sqisvalid-synth_plotrixcolour.csv
+mlr --csv cut -f datetaken,synth_plotrixcolour,synth_75sqisvalid,pacific_ymd \                      
+pacific-yyyy-mm-dd-2020-and-2019-roland-flickr-filename-imavgcolour-plotrixavgcolour-unixtimedt.csv |\
+grep -v "UTC,0," > pacific-yyyy-mm-dd-2020-2019-roland-flickr-datetaken-synth_75sqisvalid-synth_plotrixcolour.csv
 ```
 * 3\. ooops forgot unixtime_dt
 ```bash
