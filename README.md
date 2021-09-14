@@ -9,6 +9,12 @@ write_csv(pacific_df_with_plotrix_colour_unixtime_dt,
 "/Users/roland/Documents/GIT/rt-flickr-sqlite-csv/LARGE_CSV_FILES/pacific-yyyy-mm-dd-2020-and-2019-roland-flickr-filename-imavgcolour-plotrixavgcolour-unixtimedt.csv",
 na="")
 ```
+* 2\. write a CSV file with only the columns we need
+```bash
+mlr --csv cut -f datetaken,synth_plotrixcolour,synth_75sqisvalid,pacific_ymd\                      
+ pacific-yyyy-mm-dd-2020-and-2019-roland-flickr-filename-imavgcolour-plotrixavgcolour-unixtimedt.csv |\
+grep -v "0," > pacific-yyyy-mm-dd-2020-2019-roland-flickr-datetaken-synth_75sqisvalid-synth_plotrixcolour.csv
+```
 
 ## 09may2021 convert to PNG via RGB
 
