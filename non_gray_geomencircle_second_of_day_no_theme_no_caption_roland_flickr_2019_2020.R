@@ -3,7 +3,7 @@ library(ggalt)
 library(lubridate)
 roland_f_2019_2020_narrow_dataset <- read_csv("LARGE_CSV_FILES/pacific-yyyy-mm-dd-2020-2019-roland-flickr-datetaken-synth_75sqisvalid-synth_plotrixcolour_unixtimedt.csv")
 non_gray_roland_f_2019_2020_narrow_dataset <- roland_f_2019_2020_narrow_dataset %>% 
-  filter(!grepl('gray', synth_plotrixcolour))
+  filter(!grepl('gray|grey', synth_plotrixcolour))
 non_gray_second_of_day_roland_f_2019_2020_narrow_dataset <- 
   non_gray_roland_f_2019_2020_narrow_dataset %>% 
   rowwise() %>% 
