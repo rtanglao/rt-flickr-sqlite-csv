@@ -3,7 +3,7 @@ flickr api data in CSV and SQLite
 
 ## 02october2021
 
-* 1\. Figue out the number of 75x75 slots
+* 1\. Figure out the number of 75x75 slots
 * /Users/roland/Documents/GIT/rt-flickr-sqlite-csv/OUTPUT_GRAPHICS/8025x9620-red_pink_geomencircle_second_of_day_no_theme_no_caption_roland_flickr_2019_2020.png
 ```ruby
 irb(main):002:0> 8025.div(75) - 1
