@@ -1,6 +1,16 @@
 # rt-flickr-sqlite-csv
 flickr api data in CSV and SQLite
 
+## 02october2021
+
+* /Users/roland/Documents/GIT/rt-flickr-sqlite-csv/OUTPUT_GRAPHICS/8025x9620-red_pink_geomencircle_second_of_day_no_theme_no_caption_roland_flickr_2019_2020.png
+```ruby
+irb(main):002:0> 8025.div(75) - 1
+=> 106
+irb(main):006:0> 9620.div(75) - 1
+=> 127
+```
+
 ## 13september2021
 
 * running [theme-void-create-flickr-roland-2019-2020-average-colour-by-the-second-scale-free.R](https://github.com/rtanglao/rt-flickr-sqlite-csv/blob/main/theme-void-create-flickr-roland-2019-2020-average-colour-by-the-second-scale-free.R) creates [8000px-flickr-roland-2019-2020-average-colour-by-the-second-scale-free.png](https://github.com/rtanglao/rt-flickr-sqlite-csv/blob/main/OUTPUT_GRAPHICS/theme-void-8000px-flickr-roland-2019-2020-average-colour-by-the-second-scale-free.png)
