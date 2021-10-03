@@ -1,0 +1,25 @@
+D, [2021-10-03T00:19:08.094188 #38683] DEBUG -- : #<CSV::Row "file":"/Users/roland/Documents/GIT/rt-flickr-sqlite-csv/OUTPUT_GRAPHICS/8025x9620-red_pink_geomencircle_second_of_day_no_theme_no_caption_roland_flickr_2019_2020.png" "width":"8025" "length":"9620" "max75x":"106" "max75y":"127">
+#<Thread:0x00007fb41c16fb98 ../create-75px-75px-patches.rb:46 run> terminated with exception (report_on_exception is true):
+../create-75px-75px-patches.rb:47:in `each': stream closed in another thread (IOError)
+	from ../create-75px-75px-patches.rb:47:in `block (3 levels) in <main>'
+#<Thread:0x00007fb41c13cc20 ../create-75px-75px-patches.rb:46 run> terminated with exception (report_on_exception is true):
+../create-75px-75px-patches.rb:47:in `each': stream closed in another thread (IOError)
+	from ../create-75px-75px-patches.rb:47:in `block (3 levels) in <main>'
+#<Thread:0x00007fb41b84f9a0 ../create-75px-75px-patches.rb:46 run> terminated with exception (report_on_exception is true):
+../create-75px-75px-patches.rb:47:in `each': stream closed in another thread (IOError)
+	from ../create-75px-75px-patches.rb:47:in `block (3 levels) in <main>'
+#<Thread:0x00007fb41c13d4e0 ../create-75px-75px-patches.rb:46 run> terminated with exception (report_on_exception is true):
+../create-75px-75px-patches.rb:47:in `each': stream closed in another thread (IOError)
+	from ../create-75px-75px-patches.rb:47:in `block (3 levels) in <main>'
+#<Thread:0x00007fb41c13c978 ../create-75px-75px-patches.rb:46 run> terminated with exception (report_on_exception is true):
+../create-75px-75px-patches.rb:47:in `each': stream closed in another thread (IOError)
+	from ../create-75px-75px-patches.rb:47:in `block (3 levels) in <main>'
+#<Thread:0x00007fb41c15e2a8 ../create-75px-75px-patches.rb:46 run> terminated with exception (report_on_exception is true):
+../create-75px-75px-patches.rb:47:in `each': stream closed in another thread (IOError)
+	from ../create-75px-75px-patches.rb:47:in `block (3 levels) in <main>'
+#<Thread:0x00007fb41b88bf40 ../create-75px-75px-patches.rb:46 run> terminated with exception (report_on_exception is true):
+../create-75px-75px-patches.rb:47:in `each': stream closed in another thread (IOError)
+	from ../create-75px-75px-patches.rb:47:in `block (3 levels) in <main>'
+#<Thread:0x00007fb41c19e5d8 ../create-75px-75px-patches.rb:46 run> terminated with exception (report_on_exception is true):
+../create-75px-75px-patches.rb:47:in `each': stream closed in another thread (IOError)
+	from ../create-75px-75px-patches.rb:47:in `block (3 levels) in <main>'
