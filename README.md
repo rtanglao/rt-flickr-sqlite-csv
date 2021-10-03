@@ -1,7 +1,20 @@
 # rt-flickr-sqlite-csv
 flickr api data in CSV and SQLite
 
-## 02october2021
+## 03october2021 make the legs for tights!
+
+```bash
+ls -1 *.jpg | shuf -n 3825 > right-leg-shuffled-3825-red-pink-2019-20-jpgs.txt
+ls -1 *.jpg | shuf -n 3825 > left-leg-shuffled-3825-red-pink-2019-20-jpgs.txt
+montage -verbose -adjoin -tile 45x85 +frame +shadow +label -adjoin \
+-geometry '75x75+0+0<' @right-leg-shuffled-3825-pink-petal-jpgs.txt \
+right-leg_artofwhere-red-pink-2019-20.png
+montage -verbose -adjoin -tile 45x85 +frame +shadow +label -adjoin \
+-geometry '75x75+0+0<' @left-leg-shuffled-3825-pink-petal-jpgs.txt \
+left-leg_artofwhere-red-pink-2019-20.png
+```
+
+## 02october2021 75x75 pixel patch creation day
 
 * 1\. Figure out the number of 75x75 slots
 * /Users/roland/Documents/GIT/rt-flickr-sqlite-csv/OUTPUT_GRAPHICS/8025x9620-red_pink_geomencircle_second_of_day_no_theme_no_caption_roland_flickr_2019_2020.png
