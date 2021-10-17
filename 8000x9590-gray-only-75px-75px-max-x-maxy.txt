@@ -1,0 +1,2 @@
+file,width,length,max75x,max75y
+/Users/roland/Documents/GIT/rt-flickr-sqlite-csv/OUTPUT_GRAPHICS/gray_only_geomencircle_second_of_day_no_theme_no_caption_roland_flickr_2019_2020.png,8000,9590,106,127
