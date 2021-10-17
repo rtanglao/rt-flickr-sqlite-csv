@@ -1,6 +1,16 @@
 # rt-flickr-sqlite-csv
 flickr api data in CSV and SQLite
 
+## 17october20201 too much white colour so overlay to make a more colourful leg
+* problem is that there are jaggies?!? is this a bug? or do i need to do some sort of smoothing?
+
+```bash
+magick convert right-leg_artofwhere-red-pink-2019-20.png -transparent "#ffffff" transparent-right-leg_artofwhere-red-pink-2019-20.png
+magick convert left-leg_artofwhere-red-pink-2019-20.png -transparent "#ffffff" transparent-left-leg_artofwhere-red-pink-2019-20.png
+magick convert -background none -layers flatten  transparent-right-leg_artofwhere-red-pink-2019-20.png transparent-left-leg_artofwhere-red-pink-2019-20.png transparent-artofwhere_left_and_right_overlaid-red-pink-2019-2020.png # [1]
+# drawing over makes the same image as [1]
+magick transparent-right-leg_artofwhere-red-pink-2019-20.png -draw "image over 0,0 0,0 'transparent-left-leg_artofwhere-red-pink-2019-20.png'" drawover-transparent-artofwhere_left_and_right_overlaid-red-pink-2019-2020.png
+```
 ## 03october2021 make the legs for tights!
 
 ```bash
