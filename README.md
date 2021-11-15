@@ -1,7 +1,12 @@
 # rt-flickr-sqlite-csv
 flickr api data in CSV and SQLite
 
-## 14november20201 how to make th background pink 
+## 14november2021 making gray patches
+```bash
+cd ~/Documents/GIT/rt-flickr-sqlite-csv/GRAY_ONLY_75PX_BY_75PX_PATCHES
+../create-75px-75px-patches.rb ../8000x9590-gray-only-75px-75px-max-x-maxy.txt 10000 &
+```
+## 14november2021 how to make th background pink 
 * 1\.from: [Replace only background color of PNG](https://stackoverflow.com/questions/39928633/replace-only-background-color-of-png)
 ```bash
 convert in.png -bordercolor blue -border 1 -fill green  -draw 'color 0,0 floodfill' -shave 1x1 result.png
