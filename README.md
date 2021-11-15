@@ -1,7 +1,12 @@
 # rt-flickr-sqlite-csv
 flickr api data in CSV and SQLite
 
-## 17october20201 too much white colour so overlay to make a more colourful leg
+## 14november20201 how to make th background pink 
+from: [Replace only background color of PNG](https://stackoverflow.com/questions/39928633/replace-only-background-color-of-png)
+```bash
+convert in.png -bordercolor blue -border 1 -fill green  -draw 'color 0,0 floodfill' -shave 1x1 result.png
+```
+## 17october2021 too much white colour so overlay to make a more colourful leg
 * problem is that there are jaggies?!? is this a bug? or do i need to do some sort of smoothing?
 
 ```bash
