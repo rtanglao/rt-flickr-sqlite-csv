@@ -1,6 +1,14 @@
 # rt-flickr-sqlite-csv
 flickr api data in CSV and SQLite
 
+## 18december2021 make grey png
+
+```bash
+find . -name '*.jpg' -print  | shuf -n 6400 > 80x80gray-only-jpgs.txt
+montage -verbose -adjoin -tile 80x80 +frame +shadow +label -adjoin \
+-geometry '75x75+0+0<' @80x80gray-only-jpgs.txt \
+grey-only-6400x6400.png
+```
 ## 14november2021 making gray patches
 ```bash
 cd ~/Documents/GIT/rt-flickr-sqlite-csv/GRAY_ONLY_75PX_BY_75PX_PATCHES
