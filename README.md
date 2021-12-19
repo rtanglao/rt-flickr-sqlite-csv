@@ -1,6 +1,10 @@
 # rt-flickr-sqlite-csv
 flickr api data in CSV and SQLite
 
+## 18december2021 replace white with pink
+```bash
+magick grey-only-6400x6400.png -fuzz 25% -fill pink -opaque white -flatten pink-background-grey-only-6400x6400.png
+```
 ## 18december2021 make grey png
 
 ```bash
